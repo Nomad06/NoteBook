@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Controller">
+    <children>
+        <AnchorPane prefHeight="222.0" prefWidth="6132.0" VBox.vgrow="ALWAYS">
+            <children>
+
+                <TableView fx:id="tableNotes" onKeyPressed="#enterKeyPress" onContextMenuRequested="#contextMenuRequest" prefHeight="324.0" prefWidth="600.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+                    <columns>
+                        <!-- Колонки таблицы -->
+                        <TableColumn fx:id="noteColumn" minWidth="3.0" prefWidth="351.0" text="Note" />
+                        <TableColumn fx:id="dateColumn" prefWidth="240.0" text="Date" />
+
+                    </columns>
+
+                </TableView>
+            </children>
+        </AnchorPane>
+        <AnchorPane>
+            <children>
+                <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="6308.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonAction" prefHeight="34.0" prefWidth="119.0" text="Add Note">
+                            <padding>
+                                <Insets bottom="20.0" top="20.0" />
+                            </padding>
+                            <HBox.margin>
+                                <Insets left="20.0" right="20.0" />
+                            </HBox.margin>
+                        </Button>
+                  <Button fx:id="editButton" mnemonicParsing="false" onAction="#addButtonAction" prefHeight="61.0" prefWidth="113.0" text="Edit">
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#addButtonAction" prefHeight="61.0" prefWidth="113.0" text="Delete">
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

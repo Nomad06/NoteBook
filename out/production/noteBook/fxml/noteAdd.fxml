@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.NoteAddController">
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="345.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.0" minWidth="0.0" prefWidth="55.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+      <HBox alignment="CENTER" GridPane.columnIndex="1">
+         <children>
+            <Label graphicTextGap="5.0" text="Date" textFill="#3a4ebf">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+              <TextField fx:id="dateField" alignment="TOP_LEFT" promptText="Enter date" GridPane.columnIndex="1" />
+         </children>
+      </HBox>
+        <TextArea fx:id="noteArea" prefHeight="133.0" prefWidth="251.0" promptText="Enter note" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <AnchorPane />
+      <AnchorPane />
+      <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="noteAddButton" defaultButton="true" mnemonicParsing="false" onAction="#actionAdd" prefHeight="31.0" prefWidth="129.0" text="Add Note" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+              <Button fx:id="cancelButton" alignment="BOTTOM_CENTER" cancelButton="true" mnemonicParsing="false" onAction="#actionClose" prefHeight="31.0" prefWidth="139.0" text="Cancel">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+    </children>
+</GridPane>
